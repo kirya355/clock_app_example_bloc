@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:timerblocexample/blocs/bloc_page/page_bloc.dart';
+import 'package:timerblocexample/blocs/bloc_page/pages_bloc.dart';
 import 'package:timerblocexample/constants.dart';
 import 'package:timerblocexample/ui/pages/pages.dart';
 
@@ -60,7 +60,7 @@ class AppScreen extends StatelessWidget {
                 ),
               ),
             ],
-            onTap: (_index) => TapEvent(index: _index),
+            onTap: (_index) => _pageBloc.add(TapEvent(index: _index)),
           );
         },
       ),

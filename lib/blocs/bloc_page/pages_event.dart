@@ -1,6 +1,5 @@
-part of 'page_bloc.dart';
+part of 'pages_bloc.dart';
 
-//enum PageEvent { eventTap/*, eventAlarm, eventWorldTime, eventStopwatch, eventTimer*/ }
 abstract class PageEvent extends Equatable {
   const PageEvent();
 
