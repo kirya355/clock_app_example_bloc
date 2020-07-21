@@ -6,7 +6,7 @@ part 'pages_event.dart';
 part 'pages_state.dart';
 
 class PageBloc extends Bloc<PageEvent, PageState> {
-  PageBloc() : super(StateAlarm());
+  PageBloc() : super(StateWorldTime());
   int currentIndex = 0;
 
   @override
@@ -14,15 +14,12 @@ class PageBloc extends Bloc<PageEvent, PageState> {
     if (event is TapEvent) {
       this.currentIndex = event.index;
       if (this.currentIndex == 0) {
-        yield StateAlarm();
-      }
-      if (this.currentIndex == 1) {
         yield StateWorldTime();
       }
-      if (this.currentIndex == 2) {
+      if (this.currentIndex == 1) {
         yield StateStopwatch();
       }
-      if (this.currentIndex == 3) {
+      if (this.currentIndex == 2) {
         yield StateTimer();
       }
     }

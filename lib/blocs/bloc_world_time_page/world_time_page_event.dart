@@ -2,7 +2,10 @@ part of 'world_time_page_bloc.dart';
 
 abstract class WorldTimePageEvent extends Equatable {
   const WorldTimePageEvent();
+  @override
+  List<Object> get props => [];
 }
+
 class TimerTicked extends WorldTimePageEvent {
   final String time;
 
